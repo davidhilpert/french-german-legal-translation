@@ -1,0 +1,36 @@
+{
+  "name": "French-German Legal Translation",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
+      "version": "latest"
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ikuyadeu.r",
+        "rdebugger.r-debugger"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "r.rpath.linux": "/usr/bin/R",
+        "r.rterm.linux": "/usr/bin/R"
+      }
+    }
+  },
+
+  "remoteUser": "vscode",
+
+  "postCreateCommand": "pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && R -e \"install.packages('eurlex', repos='https://cloud.r-project.org/', dependencies=TRUE)\"",
+
+  "postStartCommand": "echo '✓ Dev container ready! Run: python test_setup.py to verify installation'"
+}
