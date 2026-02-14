@@ -406,12 +406,13 @@ If you use this work in your research or project, please cite:
 ---
 
 ## 🙏 Acknowledgments
-
+- **Claude Code**
+- **Michal Ovádek** for the [eurlex](https://github.com/michalovadek/eurlex) library to download EU legal texts from R: Ovádek (2021) Facilitating access to data on European Union laws, *Political Research Exchange*, 3:1, DOI: [10.1080/2474736X.2020.1870150](https://www.tandfonline.com/doi/full/10.1080/2474736X.2020.1870150)
 - **CJEU** for providing high-quality parallel legal corpus via EUR-Lex
 - **Hugging Face** for Transformers library and model hosting
 - **Facebook AI** for mBART-large-50 pre-trained model
 - **Helsinki-NLP** for opus-mt baseline model
-- **Google Colab** for free GPU resources
+- **Google Colab** for GPU resources
 
 ---
 
